@@ -1,0 +1,96 @@
+.task-info {
+  width: 30rem;
+  color: #dadada;
+  transition: 0.4s;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.863);
+  box-shadow: 0 0 2.4rem 0.6rem rgba(0, 0, 0, 0.671);
+  border: 1px solid #f770277a;
+  border-radius: 4px;
+  z-index: 4;
+}
+
+.task-info-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0);
+  z-index: -1;
+}
+
+.modal-title.expanded-task {
+  background-color: #d85006a8;
+
+  margin-bottom: 2rem;
+}
+
+.animation-fix {
+  transition: all 0.01s !important;
+}
+
+.date-created {
+  font-size: 1.4rem;
+  padding: 0.2rem 0.4rem;
+  font-style: italic;
+  background-color: #ff7b3356;
+  border-radius: 4px;
+}
+
+.modal-description {
+  padding: 2rem;
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+
+.modal-description.expanded-task {
+}
+
+.expanded-task .close-modal {
+  top: 1rem;
+}
+
+.task-info-buttons {
+  display: flex;
+  padding: 0 2rem 2rem;
+  gap: 1rem;
+}
+
+.task-btn {
+  padding: 1.6rem;
+  border-radius: 4px;
+  border: none;
+  font-size: 2rem;
+}
+
+.complete {
+  background-color: #74b816;
+  color: white;
+  width: 80%;
+}
+
+.complete:hover {
+  background-color: #82c91e;
+  cursor: pointer;
+}
+
+.trash {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #c92a2a;
+  width: 20%;
+}
+
+.trash-icon {
+  filter: invert(96%) sepia(1%) saturate(3148%) hue-rotate(201deg)
+    brightness(115%) contrast(71%);
+
+  width: 5rem;
+}
+
+.trash:hover {
+  background-color: #e03131;
+  cursor: pointer;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Managena</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&family=Roboto+Condensed:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" src="src/js/controller.js"></script>
+    <link rel="stylesheet" href="src/css/main.css" />
+  </head>
+  <body>
+    <div class="app">
+      <nav class="nav-color main-nav">
+        <div class="title-container">
+          <img
+            class="calendar-icon icon"
+            src="src/img/icons/calendar-outline.svg"
+            alt=""
+          />
+          <h1 class="title">Managena Task Manager</h1>
+        </div>
+
+        <div class="config-container">
+          <button class="nav-item nav-color big-nav-btn help-btn btn">
+            Help
+          </button>
+          <button
+            class="nav-item nav-color big-nav-btn completed-tasks-btn btn"
+          >
+            Completed Tasks
+          </button>
+          <img
+            class="nav-item config-icon config-btn icon"
+            src="src/img/icons/settings-outline.svg"
+            alt=""
+          />
+        </div>
+      </nav>
+
+      <main class="task-manager main-grid"></main>
+
+      <div class="add-task-modal-window hidden"></div>
+      <div class="help-modal-window hidden"></div>
+      <div class="completed-tasks-list hidden">
+        <div class="pagination"></div>
+      </div>
+
+      <div class="overlay hidden"></div>
+    </div>
+  </body>
+  <footer class="footer">
+    <p>
+      Managena task manager. Copyrights&copy;
+      <span class="footer-date"></span> by Robert Sciubilecki. All rights
+      reserved.
+    </p>
+  </footer>
+</html>

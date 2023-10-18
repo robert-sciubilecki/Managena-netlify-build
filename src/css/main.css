@@ -1,0 +1,89 @@
+/* FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128 */
+@import "navigation.css";
+@import "calendar.css";
+@import "addTaskModal.css";
+@import "footer.css";
+@import "taskDetails.css";
+@import "helpModal.css";
+@import "completedTasksView.css";
+@import "configModal.css";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto Condensed", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/* ///////////////////////////////////////////////////////////////////////// */
+/* //////////////////////////// main app /////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////// */
+
+.icon {
+  width: 3rem;
+  filter: invert(46%) sepia(81%) saturate(1874%) hue-rotate(346deg)
+    brightness(106%) contrast(94%);
+}
+
+.app {
+  background-image: linear-gradient(
+      160deg,
+      rgba(110, 44, 0, 0.466) 0%,
+      rgba(22, 51, 33, 0.356) 51%,
+      rgba(78, 0, 102, 0.568) 100%
+    ),
+    url("../img/background.webp");
+  background-size: cover;
+  background-position: left top;
+  background-repeat: no-repeat;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.btn-secondary {
+  width: 100%;
+  padding: 1.6rem;
+  background: linear-gradient(to bottom, var(--myColor1), var(--myColor2));
+  text-shadow: 1px 1px 2px rgba(136, 136, 136, 0.281);
+  color: rgb(218, 218, 218);
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 1.8rem;
+  position: relative;
+  border: 1px solid #f77027;
+  transition: 0.1s;
+}
+
+.btn-secondary:link,
+.btn-secondary:visited {
+  text-decoration: none;
+}
+
+.btn-secondary:hover {
+  --myColor1: #1b1b1b;
+  color: #f77027;
+  cursor: pointer;
+  box-shadow: 0 0 0.7rem 0.2rem #f770277a;
+}
+
+.btn-secondary:active {
+  --myColor1: #111111;
+  color: #f35c0b;
+  box-shadow: 0 0 0.2rem 0.1rem #f770277a;
+}
