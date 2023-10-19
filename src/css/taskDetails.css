@@ -1,6 +1,6 @@
 .task-info {
   width: 30rem;
-  color: #dadada;
+  color: var(--text-color);
   transition: 0.4s;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.863);
@@ -34,63 +34,22 @@
   font-size: 1.4rem;
   padding: 0.2rem 0.4rem;
   font-style: italic;
-  background-color: #ff7b3356;
-  border-radius: 4px;
+  color: #dadadaa8;
+  /* background-color: #ff7b3356; */
+  /* border-radius: 4px; */
 }
 
 .modal-description {
   padding: 2rem;
   font-size: 1.8rem;
   font-weight: 400;
-}
-
-.modal-description.expanded-task {
+  cursor: pointer;
 }
 
 .expanded-task .close-modal {
   top: 1rem;
 }
 
-.task-info-buttons {
-  display: flex;
-  padding: 0 2rem 2rem;
-  gap: 1rem;
-}
-
-.task-btn {
-  padding: 1.6rem;
-  border-radius: 4px;
-  border: none;
-  font-size: 2rem;
-}
-
-.complete {
-  background-color: #74b816;
-  color: white;
-  width: 80%;
-}
-
-.complete:hover {
-  background-color: #82c91e;
-  cursor: pointer;
-}
-
-.trash {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #c92a2a;
-  width: 20%;
-}
-
-.trash-icon {
-  filter: invert(96%) sepia(1%) saturate(3148%) hue-rotate(201deg)
-    brightness(115%) contrast(71%);
-
-  width: 5rem;
-}
-
-.trash:hover {
-  background-color: #e03131;
-  cursor: pointer;
+.update-task-window {
+  background-color: black;
 }

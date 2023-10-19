@@ -29,7 +29,7 @@ SPACING SYSTEM (px)
   justify-content: space-between;
   padding: 0 3rem;
   overflow: hidden;
-  height: 7.4rem;
+  height: 6.2rem;
   box-shadow: 0 0 6rem 0.2rem rgba(255, 255, 255, 0.151);
 }
 
@@ -41,7 +41,7 @@ SPACING SYSTEM (px)
 
 .title {
   font-weight: 400;
-  font-size: 3rem;
+  font-size: 2.4rem;
 }
 
 .config-container {
@@ -52,36 +52,4 @@ SPACING SYSTEM (px)
 
 .nav-item:last-child {
   margin-left: 2rem;
-}
-
-.big-nav-btn {
-  font-family: inherit;
-  height: 100%;
-  border: none;
-  font-size: 2rem;
-  padding: 0 2rem;
-  position: relative;
-  color: rgb(218, 218, 218);
-  transition: --myColor1 0.4s, --myColor2 0.4s;
-  box-shadow: 0px 0rem 0.5rem rgba(240, 240, 240, 0.616);
-}
-
-.big-nav-btn:hover {
-  --myColor2: #f7702780;
-
-  cursor: pointer;
-}
-
-.config-icon:hover {
-  cursor: pointer;
-}
-
-.config-icon {
-  position: relative;
-  color: #130808c4;
-  transition: transform 0.4s;
-}
-
-.config-icon:hover {
-  transform: rotate(45deg);
 }

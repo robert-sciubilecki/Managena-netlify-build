@@ -1,0 +1,184 @@
+/* Custom properties */
+@property --myColor1 {
+  syntax: "<color>";
+  initial-value: #1f1f1f;
+  inherits: false;
+}
+
+@property --myColor2 {
+  syntax: "<color>";
+  initial-value: #000000;
+  inherits: false;
+}
+
+/* Button styles */
+.btn {
+  font-family: inherit;
+  font-size: 1.8rem;
+  padding: 1.6rem;
+  border: none;
+  position: relative;
+  border-radius: 4px;
+  color: var(--text-color);
+  transition: --myColor1 0.4s, --myColor2 0.4s;
+}
+
+.big-nav-btn {
+  height: 100%;
+  box-shadow: 0px 0rem 0.5rem rgba(240, 240, 240, 0.616);
+  border-radius: 0;
+}
+
+.big-nav-btn:hover {
+  --myColor2: #f7702780;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  background: linear-gradient(to bottom, var(--myColor1), var(--myColor2));
+  border: 1px solid var(--hover-orange);
+}
+
+.btn-secondary:hover {
+  --myColor1: #1b1b1b;
+  color: var(--hover-orange);
+  cursor: pointer;
+  box-shadow: 0 0 0.7rem 0.2rem #f770277a;
+}
+
+.btn-secondary:active {
+  --myColor1: #111111;
+  color: #f35c0b;
+  box-shadow: 0 0 0.2rem 0.1rem #f770277a;
+}
+
+.add-task-btn {
+  width: 100%;
+  transition: 0.3s;
+  margin-bottom: 1rem;
+}
+
+.add-task-btn:link,
+.add-task-btn:visited {
+  text-decoration: none;
+}
+
+.add-task-btn:hover {
+  --myColor1: #1b1b1b;
+  color: var(--hover-orange);
+  cursor: pointer;
+}
+
+.add-task-btn:active {
+  --myColor1: #111111;
+  color: #f35c0b;
+}
+
+/* Other styles */
+.config-icon {
+  position: relative;
+  transition: transform 0.4s;
+  cursor: pointer;
+}
+
+.config-icon:hover {
+  transform: rotate(45deg);
+}
+
+.delete-btn {
+  background-color: #a30000;
+}
+
+.delete-btn:hover {
+  background-color: #ff0000;
+}
+
+.close-modal {
+  position: absolute;
+  right: 1rem;
+  width: 3rem;
+  cursor: pointer;
+  filter: invert(100%) sepia(0%) saturate(2598%) hue-rotate(191deg)
+    brightness(94%) contrast(80%);
+}
+
+.close-modal:hover {
+  filter: invert(46%) sepia(81%) saturate(1874%) hue-rotate(346deg)
+    brightness(106%) contrast(94%);
+}
+
+/* Task info buttons */
+.task-info-buttons {
+  display: flex;
+  padding: 0 2rem 2rem;
+  gap: 1rem;
+}
+
+.task-btn {
+  padding: 1.6rem;
+  border-radius: 4px;
+  border: none;
+  font-size: 2rem;
+}
+
+.complete-task-btn {
+  width: 80%;
+}
+
+.complete-task-btn:hover {
+  --myColor1: #1b1b1b;
+  cursor: pointer;
+}
+
+.trash-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #c92a2a;
+  width: 20%;
+}
+
+.trash-icon {
+  filter: invert(96%) sepia(1%) saturate(3148%) hue-rotate(201deg)
+    brightness(115%) contrast(71%);
+  width: 5rem;
+}
+
+.trash-btn:hover {
+  background-color: #e03131;
+  cursor: pointer;
+}
+
+/* Pagination button */
+.pagination-btn {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  margin-top: -2rem;
+}
+
+.pagination-btn span {
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+.pagination-btn img {
+  cursor: pointer;
+}
+
+.pagination-btn-next {
+  margin-left: auto;
+}
+
+.completed-ok-btn {
+  align-self: center;
+  width: 30rem !important;
+  margin: 2rem auto 2.6rem;
+}
+
+.help-ok-btn {
+  width: 30rem !important;
+  align-self: center;
+}

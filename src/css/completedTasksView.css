@@ -7,6 +7,7 @@
 .completed-task-li {
   list-style: none;
   display: flex;
+  gap: 2rem;
   justify-content: space-between;
   font-size: 1.8rem;
 }
@@ -24,32 +25,4 @@
   display: flex;
   justify-content: space-between;
   padding: 0 3rem;
-}
-
-.pagination-btn {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-  background-color: rgba(0, 0, 0, 0);
-  border: none;
-  margin-top: -2rem;
-}
-
-.pagination-btn span {
-  color: #dadada;
-  cursor: pointer;
-}
-
-.pagination-btn img {
-  cursor: pointer;
-}
-
-.pagination-btn-next {
-  margin-left: auto;
-}
-
-.completed-ok-btn {
-  align-self: center;
-  width: 30rem !important;
-  margin: 2rem auto 2.6rem;
 }

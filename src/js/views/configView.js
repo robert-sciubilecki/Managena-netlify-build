@@ -34,6 +34,9 @@ class ConfigView {
       Feel free to continue using Managena as usual. As new features become available, 
       they will be added here."
       </p>
+      <div class="menu add btn">
+        <button class="btn btn-secondary completed-ok-btn">Return to Managena</button>
+      </div>
     `;
   }
 }

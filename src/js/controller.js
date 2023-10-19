@@ -11,6 +11,7 @@ import completedTasksView from "./views/completedTasksView.js";
 import paginationView from "./views/paginationView.js";
 import footerView from "./views/footerView.js";
 import configView from "./views/configView.js";
+import { formatName } from "./helpers.js";
 
 function loadWeek() {
   model.loadDataFromLocalStorage();
@@ -47,22 +48,7 @@ function controlCreateTask(modalElement) {
   const durationSelect = modalElement.querySelector("#duration");
   const selectedDaylength = model.getDayLength(modalElement.dataset.weekday);
 
-  // This number looks like magic but the reason for it is this: the longer the task duration
-  // The bigger is task el in the calendar so it has more space to accommodate more characters
-  const allowedNumOfCharactersValues = {
-    1: 13,
-    2: 30,
-    3: 75,
-  };
-
   const taskDuration = durationSelect.value[0];
-  const allowedNumOfCharacters = allowedNumOfCharactersValues[taskDuration];
-
-  const nameToDisplay =
-    taskInput.value.length > allowedNumOfCharacters
-      ? `${taskInput.value.slice(0, allowedNumOfCharacters)}...`
-      : taskInput.value;
-  addTaskView.resetMissingTaskNameError();
 
   if (!taskInput.value) {
     addTaskView.renderMissingTaskName();
@@ -82,7 +68,7 @@ function controlCreateTask(modalElement) {
     date: new Date(),
     weekDay: Number(weekDay),
     name: taskInput.value,
-    nameToDisplay: nameToDisplay,
+    nameToDisplay: formatName(taskInput.value, Number(taskDuration)),
     description: descriptionInput.value,
     priority: Number(prioritySelect.value[0]),
     priorityClass: prioritySelect.value.slice(1),
@@ -101,6 +87,7 @@ function controlExpandTask(event) {
   const task = model.selectAndReturnTask(id, weekDay);
   const mouseX = event.clientX;
   const mouseY = event.clientY;
+  // taskDetailsView.removeAllDisplayedDetails();
   taskDetailsView.renderExpandTaskWindow(task, { mouseX, mouseY });
 }
 
@@ -110,13 +97,46 @@ function callDayRender(weekDay) {
 }
 
 function controlCompleteTask(weekDay) {
+  const task = model.state.selectedTask;
   model.completeExpandedTask();
-  callDayRender(weekDay);
+  taskView.removeTask(task.id);
+  // callDayRender(weekDay);
 }
 
 function controlRemoveTask(weekDay) {
+  const task = model.state.selectedTask;
   model.deleteExpandedTask();
-  callDayRender(weekDay);
+  taskView.removeTask(task.id);
+  // callDayRender(weekDay);
+}
+
+function controlEditTask(target) {
+  const taskId = target.dataset.id;
+  const taskWeekday = target.dataset.weekDay;
+  const selectedTask = model.selectAndReturnTask(taskId, taskWeekday);
+  taskDetailsView.editDescription(selectedTask);
+}
+
+function controlUpdateTask(modalElement) {
+  const id = modalElement.dataset.id;
+  const weekDay = modalElement.dataset.weekday;
+
+  const task = model.selectAndReturnTask(id, weekDay);
+
+  const taskInput = modalElement.querySelector("#task-input");
+  const descriptionInput = modalElement.querySelector("#description");
+  const prioritySelect = modalElement.querySelector("#priority");
+
+  addTaskView.resetMissingTaskNameError();
+
+  task.name = taskInput.value;
+  task.description = descriptionInput.value;
+  task.priority = Number(prioritySelect.value[0]);
+  task.priorityClass = prioritySelect.value.slice(1);
+  task.nameToDisplay = formatName(taskInput.value, task.duration);
+  // callDayRender(weekDay);
+  taskView.removeTask(id);
+  taskView.renderTask(task);
 }
 function controlHelp() {
   helpView.showHelpWindow();
@@ -148,6 +168,8 @@ function init() {
   taskDetailsView.addHandlerExpandTask(controlExpandTask);
   taskDetailsView.addHandlerCompleteTask(controlCompleteTask);
   taskDetailsView.addHandlerRemoveTask(controlRemoveTask);
+  taskDetailsView.addHandlerEditTask(controlEditTask);
+  taskDetailsView.addHandlerUpdateTask(controlUpdateTask);
   addTaskView.addHandlerCreateTask(controlCreateTask);
   paginationView.addHandlerClick(controlPagination);
 }

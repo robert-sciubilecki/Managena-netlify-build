@@ -5,18 +5,6 @@
 SPACING SYSTEM (px)
 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128 */
 
-@property --myColor1 {
-  syntax: "<color>";
-  initial-value: #1f1f1f;
-  inherits: false;
-}
-
-@property --myColor2 {
-  syntax: "<color>";
-  initial-value: #000000;
-  inherits: false;
-}
-
 .task-manager {
   position: relative;
   overflow: hidden;
@@ -36,7 +24,7 @@ SPACING SYSTEM (px)
   width: 90%;
   flex: 1;
   margin: 4rem 0;
-  background-color: #ff7f3a4d;
+  background-color: #f7702763;
   /* background-color: #ff7f3a79; */
   backdrop-filter: blur(20px);
   border: 1px inset rgba(241, 113, 7, 0.11);
@@ -53,37 +41,8 @@ SPACING SYSTEM (px)
 .date-heading {
   font-size: 1.6rem;
   font-weight: 400;
-  color: rgba(218, 218, 218, 0.733);
+  color: rgba(255, 255, 255, 0.733);
   font-family: inherit;
-}
-
-.add-task-btn {
-  width: 100%;
-  padding: 1.6rem;
-  /* background-color: blanchedalmond; */
-  border-radius: 4px;
-  font-family: inherit;
-  font-size: 1.8rem;
-  position: relative;
-  border: none;
-  transition: 0.3s;
-  margin-bottom: 1rem;
-}
-
-.add-task-btn:link,
-.add-task-btn:visited {
-  text-decoration: none;
-}
-
-.add-task-btn:hover {
-  --myColor1: #1b1b1b;
-  color: #f77027;
-  cursor: pointer;
-}
-
-.add-task-btn:active {
-  --myColor1: #111111;
-  color: #f35c0b;
 }
 
 /* ///////////////////////////////////////////////////////////////////////// */

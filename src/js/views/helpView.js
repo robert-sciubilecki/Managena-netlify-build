@@ -119,7 +119,7 @@ class HelpView {
 
           </p>
           <div class="menu add btn">
-            <button class="ok-btn btn-secondary help-ok-btn">Return to Managena</button>
+            <button class="btn btn-secondary help-ok-btn">Return to Managena</button>
           </div>
         </div>
       </div>

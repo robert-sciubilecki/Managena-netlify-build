@@ -4,7 +4,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   transition: 0.2s;
-  z-index: 2;
+  z-index: 12;
 }
 
 .modal-window {
@@ -39,7 +39,7 @@
 }
 
 .modal-title-heading {
-  padding: 2.6rem;
+  padding: 1.4rem;
   font-size: 2.4rem;
 }
 
@@ -81,48 +81,6 @@
 
 .duration {
   margin-bottom: 2.4rem;
-}
-
-.btn-modal {
-  width: 100%;
-  padding: 1.6rem;
-  background: linear-gradient(to bottom, var(--myColor1), var(--myColor2));
-  text-shadow: 1px 1px 2px rgba(136, 136, 136, 0.281);
-  color: rgb(218, 218, 218);
-  border-radius: 4px;
-  font-family: inherit;
-  font-size: 1.8rem;
-  position: relative;
-  border: 1px solid #f77027;
-  transition: 0.1s;
-}
-
-.btn-modal:link,
-.btn-modal:visited {
-  text-decoration: none;
-}
-
-.btn-modal:hover {
-  --myColor1: #1b1b1b;
-  color: #f77027;
-  cursor: pointer;
-  box-shadow: 0 0 0.7rem 0.2rem #f770277a;
-}
-
-.btn-modal:active {
-  --myColor1: #111111;
-  color: #f35c0b;
-  box-shadow: 0 0 0.2rem 0.1rem #f770277a;
-}
-
-.delete-btn {
-  background-color: rgb(163, 0, 0);
-  color: rgb(255, 230, 0);
-}
-
-.delete-btn:hover {
-  background-color: rgb(255, 0, 0);
-  color: rgb(255, 255, 255);
 }
 
 .input {
@@ -183,18 +141,4 @@
 .hidden {
   opacity: 0;
   z-index: -1;
-}
-
-.close-modal {
-  position: absolute;
-  right: 1rem;
-  width: 3rem;
-  cursor: pointer;
-  filter: invert(100%) sepia(0%) saturate(2598%) hue-rotate(191deg)
-    brightness(94%) contrast(80%);
-}
-
-.close-modal:hover {
-  filter: invert(46%) sepia(81%) saturate(1874%) hue-rotate(346deg)
-    brightness(106%) contrast(94%);
 }

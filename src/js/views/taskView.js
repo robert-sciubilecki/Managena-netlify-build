@@ -48,6 +48,11 @@ class TaskView {
     setTimeout(() => newlyCreatedElement.classList.add("fade-in"), 3);
   }
 
+  removeTask(id) {
+    const task = document.querySelector(`.task[data-id="${id}"]`);
+    task.remove();
+  }
+
   renderDay(day, weekDay) {
     this._parentElement.querySelector(`.tasks-day-${weekDay}`).innerHTML = "";
     day.forEach((task) => {

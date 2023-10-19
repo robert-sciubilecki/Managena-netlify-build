@@ -85,7 +85,7 @@ class CompletedTasksView {
   _generateButtonMarkup() {
     return `
       <div class="menu add btn">
-        <button class="ok-btn btn-secondary completed-ok-btn">Return to Managena</button>
+        <button class="btn btn-secondary completed-ok-btn">Return to Managena</button>
       </div>
     `;
   }

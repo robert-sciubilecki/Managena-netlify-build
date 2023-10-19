@@ -132,8 +132,8 @@ class AddTaskView {
               </select>
             </div>
             
-            <div class="menu add btn">
-              <button class="add-btn btn-secondary">Add Task</button>
+            <div class="menu add">
+              <button class="add-btn btn-secondary btn">Add Task</button>
             </div>
           </form>
         </div>
