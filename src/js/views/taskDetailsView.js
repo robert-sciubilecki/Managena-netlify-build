@@ -133,11 +133,11 @@ class TaskDetailsView {
     const taskInput = document.getElementById("task-input");
     const descriptionInput = document.getElementById("description");
     const prioritySelect = document.getElementById("priority");
-    // const durationSelect = document.getElementById("duration");
+
     taskInput.value = target.name;
     descriptionInput.value = target.description;
     prioritySelect.value = `${target.priority}${target.priorityClass}`;
-    // durationSelect.value = `${target.duration}${target.durationClass}`;
+
     this._updateContainer.classList.remove("hidden");
   }
 
@@ -146,13 +146,17 @@ class TaskDetailsView {
       new Date(task.date)
     );
     return `
-      <div class="modal-title expanded-task" data-week-day="${task.weekDay}" data-id="${task.id}">
+      <div class="modal-title expanded-task" data-week-day="${
+        task.weekDay
+      }" data-id="${task.id}">
         <h2 class="modal-title-heading ">${task.name}</h2>
         <img class="close-modal" src="${closeIcon}" alt="close icon"/>
         <ion-icon class="close-modal" name="close-outline"></ion-icon>
       </div>
       <span class="date-created">Created on ${date}</span>
-      <p class="modal-description" data-week-day="${task.weekDay}" data-id="${task.id}">${task.description}</p>
+      <p class="modal-description" data-week-day="${task.weekDay}" data-id="${
+      task.id
+    }">${task.description || "Edit description"}</p>
       <div class="task-info-buttons">
         <button class="complete-task-btn btn btn-secondary">Complete!</button>
         <button class="trash-btn task-btn">

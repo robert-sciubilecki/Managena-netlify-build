@@ -112,7 +112,7 @@ class AddTaskView {
                 name="description"
                 id="description"
                 cols="30"
-                rows="7"
+                rows="4"
               ></textarea>
             </div>
             <div class="menu priority">

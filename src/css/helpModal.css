@@ -1,7 +1,6 @@
 .help-heading {
-  font-size: 2.4rem;
+  font-size: 2rem;
   font-family: "Roboto Condensed", sans-serif;
-  line-break: 1.4;
   text-align: center;
 }
 
@@ -24,14 +23,13 @@
   box-shadow: 0 0 3.4rem 2.6rem rgba(0, 0, 0, 0.418);
   border: 1px solid #f770277a;
   border-radius: 4px;
-
-  color: #dadada;
+  color: var(--text-color);
 }
 
 .help-message {
-  color: #dadada;
-  padding: 2rem;
-  font-size: 1.8rem;
+  color: var(--text-color);
+  padding: 1.4rem;
+  font-size: 1.6rem;
   font-weight: 400;
   display: flex;
   flex-direction: column;
@@ -42,6 +40,5 @@
 }
 
 .help-description:last-child {
-  margin-top: 2.4rem;
-  margin-bottom: 3rem;
+  margin-top: 2rem;
 }

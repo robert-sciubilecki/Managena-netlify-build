@@ -168,7 +168,7 @@ function shiftDays() {
 // ///////////////////////////////////////////////////////////////////////////////////////
 // ///////////////////////////////////////////////////////////////////////////////////////
 
-function setLocalStorage() {
+export function setLocalStorage() {
   const date = new Date().toISOString().split("T")[0];
   localStorage.setItem("lastLogin", JSON.stringify(date));
   // localStorage.setItem("lastLogin", JSON.stringify("10.17.2023"));

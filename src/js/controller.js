@@ -136,8 +136,10 @@ function controlUpdateTask(modalElement) {
   task.nameToDisplay = formatName(taskInput.value, task.duration);
   // callDayRender(weekDay);
   taskView.removeTask(id);
-  taskView.renderTask(task);
+  callDayRender(task.weekDay);
+  model.setLocalStorage();
 }
+
 function controlHelp() {
   helpView.showHelpWindow();
 }
